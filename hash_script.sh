@@ -5,7 +5,7 @@ generate_hash() {
   read -p "Enter a 4-digit number: " input
   # Check if the input is a 4-digit number
   if [[ $input =~ ^[0-9]{4}$ ]]; then
-    echo -n "$input" | sha256shum | cut -c1-4
+    echo -n "$input" | sha256sum | cut -c1-4
   else
     echo "Invalid input. Please enter a 4-digit number."
   fi
